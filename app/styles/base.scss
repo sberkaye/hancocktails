@@ -1,4 +1,31 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 html {
   all: unset;
-  font: 62.5%; // set 1rem = 10px
+  font-size: 62.5%; // set 1rem = 10px
+
+  @include respond(m) {
+    font-size: 50%; // set 1rem = 8px
+  }
+
+  @include respond(s) {
+    font-size: 43.75%;
+  }
+
+  @include respond(xs) {
+    font-size: 37.5%;
+  }
+
+  @include respond(xxs) {
+    font-size: 31.25%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
